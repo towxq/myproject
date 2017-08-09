@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/common/httpclient/HttpConnectionManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/common/redis/RedisCache.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/common/redis/RedisCacheUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/service/ReadRedisService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/service/WriteRedisService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/service/impl/ReadRedisServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/service/impl/WriteRedisServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/util/ConstDef.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/util/CookieUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/util/FeedbackMessage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/util/JacksonUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/ssm/util/ServiceResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/applicationContext_redis.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/jdbc.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/redis.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js" charset="UTF-8" />
+  </component>
+</project>

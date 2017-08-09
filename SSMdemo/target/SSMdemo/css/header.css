@@ -1,0 +1,177 @@
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+  height: 52px;
+  overflow: hidden;
+  -webkit-transition: height 0.3s, -webkit-transform 0.3s;
+  transition: height .3s, transform .3s;
+}
+#header.show {
+  height: 313px;
+}
+#header.show .navbar-toggle .icon-bar1,
+#header.show .navbar-toggle .icon-bar3 {
+  transform: scalex(0.8);
+  transform-origin: 0 50%;
+}
+#header.show2 {
+  height: 200px;
+}
+#header.show2 .navbar-toggle .icon-bar1,
+#header.show2 .navbar-toggle .icon-bar3 {
+  transform: scalex(0.8);
+  transform-origin: 0 50%;
+}
+#header .navbar {
+  height: 52px;
+  line-height: 52px;
+  margin-bottom: 0;
+  border-radius: 0px;
+  border: 0 none;
+}
+#header .navbar .title {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+#header .navbar .title .glyphicon {
+  font-size: 16px;
+  padding-left: 20px;
+}
+#header .navbar .title .glyphicon:before {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+#header .navbar .navbar-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  float: none;
+  padding: 14px;
+  border: 1px solid transparent;
+  display: block;
+}
+#header .navbar .navbar-toggle:hover,
+#header .navbar .navbar-toggle:focus {
+  background-color: transparent;
+  text-decoration: none;
+}
+#header .navbar .navbar-toggle .txt {
+  color: #3eae48;
+  font-size: 11px;
+  font-weight: 700;
+  float: left;
+  margin-right: 5px;
+  line-height: 17px;
+}
+#header .navbar .navbar-toggle .bars {
+  float: left;
+}
+#header .navbar .navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #3eae48;
+  transition: all 0.2s ease-out;
+}
+#header .navbar-mobile {
+  padding: 50px 0px 80px;
+}
+#header .navbar-mobile li {
+  text-align: center;
+  padding: 5px 20px;
+}
+#header .navbar-mobile li a {
+  padding-top: 10px;
+  display: block;
+  color: #3eae48;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+#header .navbar-mobile li a:hover,
+#header .navbar-mobile li a:focus {
+  color: #3eae48;
+}
+#header .navbar-mobile2 {
+  padding: 30px 0px;
+}
+#header h1.mobile-welcome {
+  color: #e54b4b;
+  font-size: 34px;
+  margin: 10px 10px 0;
+  text-align: center;
+}
+#header .navlinks {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+#header .navlinks .links {
+  display: inline-block;
+  height: 52px;
+  line-height: 16px;
+  margin: 0;
+  padding: 19px 0px 0 15px;
+  position: relative;
+  width: 80px;
+  vertical-align: top;
+  z-index: 1;
+}
+#header .navlinks .links.logout {
+  width: 50px;
+}
+#header .navlinks .links a {
+  display: inline-block;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: #898989;
+  float: right;
+  text-transform: uppercase;
+  -webkit-transition: border-bottom 0s;
+  transition: border-bottom 0s;
+}
+#header .navlinks .links a span {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  -webkit-transition: padding-top 0.3s;
+  transition: padding-top 0.3s;
+}
+#header .navlinks .links a span:first-child {
+  color: #16528e;
+  margin-top: -16px;
+}
+#header .navlinks .links a:hover span {
+  padding-top: 16px;
+}
+@media (min-width: 570px) {
+  #header .navbar-mobile {
+  display: none;
+}
+#header h1.mobile-welcome {
+  display: none;
+}
+#header .navbar .navbar-toggle.btn-mobilemenu {
+  display: none;
+}
+#header .navlinks {
+  display: block;
+}
+
+}

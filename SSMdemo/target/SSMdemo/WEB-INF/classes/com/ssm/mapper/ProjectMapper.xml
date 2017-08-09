@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.ProjectMapper">
+  <resultMap id="BaseResultMap" type="com.ssm.model.Project">
+    <constructor>
+      <idArg column="id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectname" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projecturl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectdesc" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectcreatetime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="projectupdatetime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="bgColor" javaType="java.lang.String" jdbcType="VARCHAR" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, projectname, projecturl, projectdesc, projectcreatetime, projectupdatetime,bgColor
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from project
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from project
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ssm.model.Project">
+    insert into project (id, projectname, projecturl, 
+      projectdesc, projectcreatetime, projectupdatetime
+      )
+    values (#{id,jdbcType=VARCHAR}, #{projectname,jdbcType=VARCHAR}, #{projecturl,jdbcType=VARCHAR}, 
+      #{projectdesc,jdbcType=VARCHAR}, #{projectcreatetime,jdbcType=TIMESTAMP}, #{projectupdatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ssm.model.Project">
+    insert into project
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="projectname != null">
+        projectname,
+      </if>
+      <if test="projecturl != null">
+        projecturl,
+      </if>
+      <if test="projectdesc != null">
+        projectdesc,
+      </if>
+      <if test="projectcreatetime != null">
+        projectcreatetime,
+      </if>
+      <if test="projectupdatetime != null">
+        projectupdatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="projectname != null">
+        #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projecturl != null">
+        #{projecturl,jdbcType=VARCHAR},
+      </if>
+      <if test="projectdesc != null">
+        #{projectdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcreatetime != null">
+        #{projectcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="projectupdatetime != null">
+        #{projectupdatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ssm.model.Project">
+    update project
+    <set>
+      <if test="projectname != null">
+        projectname = #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projecturl != null">
+        projecturl = #{projecturl,jdbcType=VARCHAR},
+      </if>
+      <if test="projectdesc != null">
+        projectdesc = #{projectdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcreatetime != null">
+        projectcreatetime = #{projectcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="projectupdatetime != null">
+        projectupdatetime = #{projectupdatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ssm.model.Project">
+    update project
+    set projectname = #{projectname,jdbcType=VARCHAR},
+      projecturl = #{projecturl,jdbcType=VARCHAR},
+      projectdesc = #{projectdesc,jdbcType=VARCHAR},
+      projectcreatetime = #{projectcreatetime,jdbcType=TIMESTAMP},
+      projectupdatetime = #{projectupdatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.ssm.model.Project">
+    <constructor>
+      <idArg column="id" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectname" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projecturl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectdesc" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="projectcreatetime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="projectupdatetime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, projectname, projecturl, projectdesc, projectcreatetime, projectupdatetime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from project
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from project
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ssm.model.Project">
+    insert into project (id, projectname, projecturl, 
+      projectdesc, projectcreatetime, projectupdatetime
+      )
+    values (#{id,jdbcType=VARCHAR}, #{projectname,jdbcType=VARCHAR}, #{projecturl,jdbcType=VARCHAR}, 
+      #{projectdesc,jdbcType=VARCHAR}, #{projectcreatetime,jdbcType=TIMESTAMP}, #{projectupdatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ssm.model.Project">
+    insert into project
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="projectname != null">
+        projectname,
+      </if>
+      <if test="projecturl != null">
+        projecturl,
+      </if>
+      <if test="projectdesc != null">
+        projectdesc,
+      </if>
+      <if test="projectcreatetime != null">
+        projectcreatetime,
+      </if>
+      <if test="projectupdatetime != null">
+        projectupdatetime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="projectname != null">
+        #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projecturl != null">
+        #{projecturl,jdbcType=VARCHAR},
+      </if>
+      <if test="projectdesc != null">
+        #{projectdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcreatetime != null">
+        #{projectcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="projectupdatetime != null">
+        #{projectupdatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ssm.model.Project">
+    update project
+    <set>
+      <if test="projectname != null">
+        projectname = #{projectname,jdbcType=VARCHAR},
+      </if>
+      <if test="projecturl != null">
+        projecturl = #{projecturl,jdbcType=VARCHAR},
+      </if>
+      <if test="projectdesc != null">
+        projectdesc = #{projectdesc,jdbcType=VARCHAR},
+      </if>
+      <if test="projectcreatetime != null">
+        projectcreatetime = #{projectcreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="projectupdatetime != null">
+        projectupdatetime = #{projectupdatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ssm.model.Project">
+    update project
+    set projectname = #{projectname,jdbcType=VARCHAR},
+      projecturl = #{projecturl,jdbcType=VARCHAR},
+      projectdesc = #{projectdesc,jdbcType=VARCHAR},
+      projectcreatetime = #{projectcreatetime,jdbcType=TIMESTAMP},
+      projectupdatetime = #{projectupdatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

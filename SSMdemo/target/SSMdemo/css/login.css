@@ -1,0 +1,311 @@
+/* Reset CSS */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background: url(../images/1.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    color: #000;
+    font: 14px Arial;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #563D64;
+}
+
+small {
+    font-size: 10px;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.clearfix:after,
+form:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.container {
+    width: 900px;
+    height: 267px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -133.5px;
+    margin-left: -450px;
+    z-index: 1;
+}
+
+#content {
+    -webkit-box-shadow: 0 0px 10px #fff;
+    box-shadow: 0 0px 10px #fff;
+    border: 1px solid #c4c6ca;
+    margin: 0 auto;
+    padding: 25px 0 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    width: 400px;
+}
+
+#content h1 {
+    color: #FFF;
+    font-size: 25px;
+    line-height: 20px;
+    margin: 10px 0 30px;
+}
+
+#content h1:before,
+#content h1:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    width: 27%;
+}
+
+#content h1:after {
+    background: rgb(126, 126, 126);
+    background: -moz-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(left, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    right: 0;
+}
+
+#content h1:before {
+    background: rgb(126, 126, 126);
+    background: -moz-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(right, rgba(126, 126, 126, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    left: 0;
+}
+
+#content:after,
+#content:before {
+    border: 1px solid #c4c6ca;
+    -webkit-box-shadow: 0 0px 10px #fff;
+    box-shadow: 0 0px 10px #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -1px;
+    position: absolute;
+    width: 100%;
+}
+
+#content:after {
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    transform: rotate(2deg);
+    top: 0;
+    z-index: -1;
+}
+
+#content:before {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    top: 0;
+    z-index: -2;
+}
+
+#content form {
+    margin: 0 20px;
+    position: relative
+}
+
+#content .glyphicon {
+    display: block;
+}
+
+#content .glyphicon:before {
+    position: absolute;
+    font-size: 20px;
+    padding-top: 12px;
+    top: 0;
+    left: 48px;
+    color: #FFF;
+}
+
+#content form input.input-text {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: transparent;
+    border: 1px solid #c8c8c8;
+    color: #FFF;
+    font: 13px Helvetica, Arial, sans-serif;
+    margin: 0 0 10px;
+    padding: 15px 10px 15px 40px;
+    width: 80%;
+}
+
+#content form input.input-text:focus {
+    -webkit-box-shadow: 0 0 2px #ed1c24 inset;
+    box-shadow: 0 0 2px #ed1c24 inset;
+    border: 1px solid #ed1c24;
+    outline: none;
+}
+
+#content form input.input-text::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+#content input#submitBtn {
+    width: 50%;
+}
+
+.button {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+    -ms-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    padding: 25px 0 35px;
+}
+
+.taglist {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1
+}
+
+.filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(../images/1.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-filter: blur(60px);
+    filter: blur(60px);
+}
+
+@media (max-width: 570px) {
+    body {
+        background-size: auto;
+    }
+
+    #content {
+        width: 260px;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin: 5px 0 15px;
+    }
+
+    #content .glyphicon:before {
+        font-size: 12px;
+        padding-top: 7px;
+        left: 30px;
+    }
+
+    #content form input.input-text {
+        margin: 0 0 10px;
+        padding: 6px 10px 5px 30px;
+    }
+
+    .button {
+        padding: 15px 0 25px;
+    }
+
+    #content input#submitBtn {
+        padding: 3px 12px;
+    }
+}

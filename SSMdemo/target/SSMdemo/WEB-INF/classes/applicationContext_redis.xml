@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/tx
+      http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         ">
+
+  <!-- scanner redis properties  -->
+  <!--<context:property-placeholder location="classpath:redis.properties"/>-->
+
+  <context:component-scan base-package="com.ssm" />
+
+  <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig"> 
+ 		<property name="maxIdle" value="300"  />
+        <property name="maxTotal" value="600"  />
+        <property name="maxWaitMillis" value="1000"  />
+        <property name="testOnBorrow" value="true"  />
+  </bean> 
+     
+  <bean id="readConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" 
+    p:host-name="${read.redis.host}"
+    p:port="${read.redis.port}"
+    p:password="${read.redis.password}"
+    p:database="${read.redis.dataBase}"
+    p:pool-config-ref="poolConfig"/> 
+  
+  
+  <bean id="readRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate"> 
+        <property name="connectionFactory"   ref="readConnectionFactory" /> 
+  	    <property name="defaultSerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+ 
+       <!--  如果不配置Serializer，只能使用String存储
+        <property name="keySerializer">
+            <bean
+                class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+         </property>
+        <property name="valueSerializer">
+            <bean
+                class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+         </property>
+         --> 
+  	</bean>
+  	
+  	<bean id="writeConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" 
+    p:host-name="${write.redis.host}"
+    p:port="${write.redis.port}"
+    p:password="${write.redis.password}"
+    p:database="${write.redis.dataBase}"
+    p:pool-config-ref="poolConfig"/> 
+  
+  
+  <bean id="writeRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate"> 
+        <property name="connectionFactory"   ref="writeConnectionFactory" /> 
+  	    <property name="defaultSerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+ 
+       <!--  如果不配置Serializer，只能使用String存储
+        <property name="keySerializer">
+            <bean
+                class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+         </property>
+        <property name="valueSerializer">
+            <bean
+                class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+         </property>
+         --> 
+  	</bean>
+  	<!-- 
+	 <bean id="redisCache" class="com.sfbest.common.cache.RedisCacheUtil">
+	    	<property name="redisTemplate" ref="redisTemplate"/>
+	    	</bean>
+	 
+	  --> 
+	 <bean id="readRedisService" class="com.ssm.service.impl.ReadRedisServiceImpl">
+		<property name="readRedisTemplate" ref="readRedisTemplate"/>
+	
+	 </bean>
+	 
+	 <bean id="writeRedisService" class="com.ssm.service.impl.WriteRedisServiceImpl">
+		<property name="writeRedisTemplate" ref="writeRedisTemplate"/>
+	
+	 </bean>
+	 
+	 
+	
+	</beans>
