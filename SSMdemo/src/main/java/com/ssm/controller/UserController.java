@@ -76,16 +76,6 @@ public class UserController {
             model.addAttribute("counts",counts);
             model.addAttribute("page",page);
             model.addAttribute("pagesize",pagesize);
-//            if (page!=1&&page>=counts){
-//                model.addAttribute("page1","/user/userlist/"+(page-1)+"/"+pagesize);
-//            }
-//            if (page!=1&&page<counts){
-//                model.addAttribute("page1","/user/userlist/"+(page-1)+"/"+pagesize);
-//                model.addAttribute("page2","/user/userlist/"+(page+1)+"/"+pagesize);
-//            }
-//            if (page==1&&page<counts){
-//                model.addAttribute("page2","/user/userlist/"+(page+1)+"/"+pagesize);
-//            }
               return "/login/userlist";
     }
 
@@ -98,16 +88,6 @@ public class UserController {
             model.addAttribute("counts",counts);
             model.addAttribute("page",page);
             model.addAttribute("pagesize",pagesize);
-//            if (page!=1&&page>=counts){
-//                model.addAttribute("page1","/user/projectlist/"+(page-1)+"/"+pagesize);
-//            }
-//            if (page!=1&&page<counts){
-//                model.addAttribute("page1","/user/projectlist/"+(page-1)+"/"+pagesize);
-//                model.addAttribute("page2","/user/projectlist/"+(page+1)+"/"+pagesize);
-//            }
-//            if (page==1&&page<counts){
-//                model.addAttribute("page2","/user/projectlist/"+(page+1)+"/"+pagesize);
-//            }
             return "/login/projectlist";
     }
 

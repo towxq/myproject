@@ -113,7 +113,7 @@
             <#if (page!=1&&page>=counts)>
                 <li><a href="${ctx}/user/projectlist/${page-1}/${pagesize}"><span>«</span></a></li>
                 <li><a>${page}</a></li>
-                <li><a href=""><span>»</span></a></li>
+                <li class="disabled"><a href=""><span>»</span></a></li>
             </#if>
 
             <#if (page!=1&&page<counts)>
@@ -123,7 +123,7 @@
             </#if>
 
             <#if (page==1&&page<counts)>
-                <li><a href=""><span>«</span></a></li>
+                <li class="disabled"><a href=""><span>«</span></a></li>
                 <li><a>${page}</a></li>
                 <li><a href="${ctx}/user/projectlist/${page+1}/${pagesize}"><span>»</span></a></li>
             </#if>
